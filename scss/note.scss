@@ -1,0 +1,180 @@
+@font-face {
+    font-family: 'Roboto_reg';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto_bold';
+    src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/Roboto-Bold.woff') format('woff'),
+        url('../fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+%reg {
+    font-family: 'Roboto_reg', sans-serif;
+}
+
+%bold {
+    font-family: 'Roboto_bold', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    @extend %reg;
+}
+
+.header {
+    background: #71D0BF;
+
+    &-row {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        &-logo {
+            margin-right: 100px;
+
+            &-link {
+                font-size: 48px;
+                @extend %bold;
+                color: black;
+                text-decoration: none;
+            }
+        }
+
+        &-nav {
+            &-item {
+                text-decoration: none;
+                font-size: 32px;
+                color: black;
+
+                &:not(:last-child) {
+                    margin-right: 45px;
+                }
+            }
+        }
+    }
+}
+
+.main{
+        background-color: rgb(172, 172, 177);
+        padding-top: 20px;
+        padding-bottom: 50px;
+        &-content{
+            &-tabs{
+                &-row{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    text-align: center;
+                    flex-wrap: wrap;
+                    .tab{
+                        
+                        margin-top: 30px;
+                        flex-basis: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 50px;
+                        border: 2px solid black;
+                        &-header{
+                            margin-bottom: 20px;
+                            border-bottom: 1px solid black;
+                            &-text{
+                                @extend %bold;
+                                font-size: 25px;
+                                text-transform: uppercase;
+                            }
+                        }
+                        &-content{
+                            padding: 10px;
+                            border: 1px solid black;
+                            &-text{
+                                font-size: 18px;
+                            }
+                        }
+                        
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+}
+.main-content-tabs-row .tab[style *= "order: 0"] {
+    background-color: rgba(145, 145, 12, 0.623);
+}
+
+@media (max-width: 1240px){
+    .container {
+        max-width: 768px;
+    }
+    .main-content-tabs-row .tab {
+        flex-basis: 48%;
+    }
+}
+@media (max-width: 810px) {
+    .container {
+        max-width: 576px;
+    }
+    .header-row-logo {
+        margin-right: 50px;
+    }
+    .header-row-nav-item{
+        font-size: 25px;
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+    .main-content-tabs-row 
+    {
+        justify-content: center;
+        .tab {
+            flex-basis: 90%;
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        max-width: 340px;
+    }
+    .header{
+        &-row{
+            padding: 10px 0;
+        }
+    }
+
+    .header-row-nav-item:not(:last-child) {
+        margin-right: 0px;
+    }
+    .main-content-tabs-row {
+        .tab {
+            margin-top: 15px;
+            padding: 25px;
+        }
+    }
+}

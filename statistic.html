@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/statistic.css">
+</head>
+    <body>
+        <header class="header">
+                <div class="container">
+                    <div class="header-row">
+                        <div class="header-row-logo"><a href="index.html" class="header-row-logo-link">Lab1</a></div>
+                        <nav class="header-row-nav">
+                            <a href="index.html" class="header-row-nav-item"><span>Статья</span></a>
+                            <a href="statistic.html" class="header-row-nav-item"><span>Статистика</span></a>
+                            <a href="note.html" class="header-row-nav-item"><span>Заметки</span></a>
+                            <a href="RegistrForm.html" class="header-row-nav-item"><span>Анкета</span></a>
+                            <a href="API.html" class="header-row-nav-item"><span>API</span></a>
+                        </nav>
+                    </div>
+                </div>
+        </header>
+
+        <section class="main">
+            <div class="container">
+                <div class="main-info">
+                    <table class="main-table">
+                        <t-head>
+                            <tr id="tableHead">
+                                <th>Company</th>
+                                <th>Q1</th>
+                                <th>Q2</th>
+                                <th>Q3</th>
+                                <th>Q4</th>
+                            </tr>
+                        </t-head>
+                        <t-body>
+                            <tr id="Microsoft">
+                                <td>Microsoft</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr id="Google">
+                                <td>Google</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr id="Apple">
+                                <td>Apple</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr id="IBM">
+                                <td>IBM</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </t-body>
+                    </table>
+                    <canvas id="myChart" class="myChart"></canvas>
+                    <div class="buttons">
+                        <button class="popup-link btn btn-center" id="#popupValue">Изменить значения таблицы</button>
+                        <button class="popup-link btn btn-center" id="#popupColor">Изменить цвет линии</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <div id="popupValue" class="popup-value">
+        <div class="popup-value-body">
+            <div class="popup-value-body-content">
+                <form role="form" autocomplete="off" class="value-form" id="formValue">
+                    <div class="label-input">
+                    <label>Company</label>
+                        <select name="company">
+                            <option selected>Microsoft</option>
+                            <option>Google</option>
+                            <option>Apple</option>
+                            <option>IBM</option>
+                        </select>
+                    </div>
+                    <div class="label-input">
+                        <label>Q1</label>
+                        <input type="number" step="0.01" max="500" name="Q1" required>
+                    </div>
+                    <div class="label-input">
+                        <label>Q2</label>
+                        <input type="number" step="0.01" max="500" name="Q2" required>
+                    </div>
+                    <div class="label-input">
+                        <label>Q3</label>
+                        <input type="number" step="0.01" max="500" name="Q3" required>
+                    </div>
+                    <div class="label-input">
+                        <label>Q4</label>
+                        <input type="number" step="0.01" max="500" name="Q4" required>
+                    </div>
+                    <button type="submit" class="btn btn-center">Изменить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="popupColor" class="popup-value">
+        <div class="popup-value-body">
+            <div class="popup-value-body-content">
+                <form role="form" autocomplete="off" class="value-form" id="formColor">
+                    <div class="label-input">
+                    <label>Company</label>
+                        <select name="company">
+                            <option selected>Microsoft</option>
+                            <option>Google</option>
+                            <option>Apple</option>
+                            <option>IBM</option>
+                        </select>
+                    </div>
+                    <div class="label-input">
+                        <label>Color</label>
+                        <input type="color" class="input-color" value="#e66465">
+                    </div>
+                    <button type="submit" class="btn btn-center">Изменить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/chart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

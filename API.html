@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/apistyle.css">
+</head>
+<body>
+   <header class="header">
+        <div class="container">
+            <div class="header-row">
+                <div class="header-row-logo"><a href="index.html" class="header-row-logo-link">Lab1</a></div>
+                <nav class="header-row-nav">
+                    <a href="index.html" class="header-row-nav-item"><span>Статья</span></a>
+                    <a href="statistic.html" class="header-row-nav-item"><span>Статистика</span></a>
+                    <a href="note.html" class="header-row-nav-item"><span>Заметки</span></a>
+                    <a href="RegistrForm.html" class="header-row-nav-item"><span>Анкета</span></a>
+                    <a href="API.html" class="header-row-nav-item"><span>API</span></a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class='Api'>
+            <div class="Canvas-body">
+                <canvas style='background: rgb(172, 172, 172);' id="chartApi" width="100" height="100"></canvas>
+            </div>
+            <div class='Form-body'>
+                <form id='formCompany' method="post">
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Наименование компании</label>
+                    <select class="form-control" name="companies[]" id="selectCompany">
+
+                    </select>
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Интервал графика</label>
+                    <select class="form-control" name="intervals[]" id="selectInterval">
+
+                    </select>
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Количество записей</label>
+                    <input type="number" class="form-control" value='500' id="exampleInputEmail1">
+                    </div>
+                    <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Начиная с даты</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1">
+                    </div>
+                    <button type="submit" style="width: 100%;" class="btn">Получить данные</button>
+                </form>
+            </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src='js/chart.js'></script>
+    <script src='js/request.js'></script>
+</body>
+</html>
